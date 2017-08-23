@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<!--		<div id="box"></div>
+  <div id="box">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <h1>h1</h1>
+  </div>
+		
+  <div id="box">
+    <p>p</p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+  </div>-->
+  
+ <div id="box">
+    <p><input type="checkbox"></p>
+    <p><input type="checkbox"></p>
+    <p><input type="checkbox"></p>
+    <p><input type="checkbox"></p>
+    <p><input type="checkbox"></p>
+  </div>
+  <input type="button" value="选择" id="btn">
+	</body>
+	<script>
+//		var oh1 = document.createElement('h1');
+//		oh1.innerText="web1707";
+//		var obox = document.getElementById('box');
+//		obox.appendChild(oh1);
+		
+//		var odiv = document.getElementById('box');
+//		function childrens(obj){
+//		var arr  = [];
+//		for(i=0;i<obj.childNodes.length;i++){
+//			if(obj.childNodes[i].nodeType == node.ENTITY_NODE){
+//				arr.push(obj.childNodes[i]);
+//			}
+//			}
+//		return arr;
+//		}
+		
+//		var oh1 = document.getElementsByTagName('h1');
+//		function prevSiblings(obj){
+//			var prev = obj;
+//			while(prev = prev.previousSiblings){
+//				if(prev.nodeType=node.ELEMENT_NODE){
+//					return prev;
+//				}
+//			}
+//			return null;
+//		}
+
+	var obtn  = document.getElementById('btn');
+	var oinput = document.getElementById('box').getElementsByTagName('input');
+	var state =0;
+	obtn.onclick = function() {
+		state = state===0 ? 1 : 0;
+		var str =state ===0 ? "":"checked";
+		this.value =state===0 ? "全选" : "全不选";
+		for(var i=0; i<oinput.length;i++){
+			oinput[i].checked=str;
+		}
+	}
+	</script>
+</html>
