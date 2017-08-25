@@ -8,14 +8,21 @@
 </head>
 <body>
   <script>
-    var str = "maxwell";
-    var s = 'max';
-    var age = 18;
-    var age = 18.1;
-    var arr = [];
-    var obj = {};
-    var reg = /a/;
-    
+    var kaiyu = {
+      "name": "凯玉",
+      "age": 19
+    };
+
+    kaiyu.age++; //改变属性  20
+    kaiyu.sex = "男"; //添加属性
+
+    console.log(kaiyu.age);
+    console.log(kaiyu.sex);
+
+    delete kaiyu.age; //删除属性
+    console.log(kaiyu);
+
+
   </script>
 </body>
 </html>
